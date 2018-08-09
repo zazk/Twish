@@ -31,4 +31,4 @@ const homeReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default homReducer;
+export default homeReducer;
