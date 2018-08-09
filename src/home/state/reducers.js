@@ -7,21 +7,18 @@ const INITIAL_STATE = {
 };
 const homeReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case types.RECEIVE_TWEETS_JSON: {
-      const { subreddit } = action;
+    case types.REQUEST_TWEETS_JSON: {
       return {
         ...state,
-        subreddit,
-        tweets: [],
         loading: true
       };
     }
 
-    case types.REQUEST_TWEETS_JSON: {
+    case types.RECEIVE_TWEETS_JSON: {
       const { tweets } = action;
       return {
         ...state,
-        tweets,
+        tweets: tweets,
         loading: false
       };
     }

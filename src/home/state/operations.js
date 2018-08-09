@@ -1,5 +1,5 @@
 import { requestTweetsJson, receiveTweetsJson } from './actions';
-import { API } from './types';
+import types from './types';
 
 const requestTweetsJsonAction = requestTweetsJson;
 const receiveTweetsJsonAction = receiveTweetsJson;
@@ -7,10 +7,10 @@ const receiveTweetsJsonAction = receiveTweetsJson;
 const fetchTweetsJson = subreddit => {
   return dispatch => {
     dispatch(requestTweetsJsonAction(subreddit));
-    return fetch(API)
+    return fetch(types.API)
       .then(response => response.json())
       .then(json => {
-        dispatch(receiveTweetsJsonAction(json));
+        dispatch(receiveTweetsJsonAction(json.statuses));
       });
   };
 };

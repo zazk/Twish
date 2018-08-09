@@ -1,3 +1,4 @@
-import React from 'react';
-const HomeContainer = () => <div>Home</div>;
+import { connect } from 'react-redux';
+import HomeComponent from './HomeComponent';
+const HomeContainer = connect()(HomeComponent);
 export default HomeContainer;
