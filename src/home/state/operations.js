@@ -1,8 +1,8 @@
-import { requestTweetsJson, receiveTweetsJson } from './actions';
+import actions from './actions';
 import types from './types';
 
-const requestTweetsJsonAction = requestTweetsJson;
-const receiveTweetsJsonAction = receiveTweetsJson;
+const requestTweetsJsonAction = actions.requestTweetsJson;
+const receiveTweetsJsonAction = actions.receiveTweetsJson;
 
 const fetchTweetsJson = subreddit => {
   return dispatch => {
