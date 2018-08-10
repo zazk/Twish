@@ -1,5 +1,5 @@
 import types from './types';
-
+// Setup initial state.
 const INITIAL_STATE = {
   term: '',
   loading: false,
@@ -7,13 +7,14 @@ const INITIAL_STATE = {
 };
 const homeReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    // Manage loading state.
     case types.REQUEST_TWEETS_JSON: {
       return {
         ...state,
         loading: true
       };
     }
-
+    // Manage results and reset loading state.
     case types.RECEIVE_TWEETS_JSON: {
       const { tweets } = action;
       return {
@@ -22,7 +23,6 @@ const homeReducer = (state = INITIAL_STATE, action) => {
         loading: false
       };
     }
-
     default:
       return state;
   }

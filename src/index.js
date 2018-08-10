@@ -7,10 +7,11 @@ import rootReducer from './reducers';
 import logger from 'redux-logger';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-
+// Using thunk to manage async actions
 const middleware = applyMiddleware(thunk, logger);
+// Set the store with the reducers
 const store = createStore(rootReducer, middleware);
-
+// Setup Redux
 ReactDOM.render(
   <Provider store={store}>
     <App />

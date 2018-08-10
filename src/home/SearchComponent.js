@@ -4,7 +4,7 @@ const btnClasses =
 // Receive states and action dispatch function
 const SearchComponent = ({ tweets, loading, fetchTweetsJson }) => {
   if (loading) {
-    return <div className="bar-actions">Loading...</div>;
+    return <div className="bar-actions">Searching Tweets...</div>;
   }
   // print results
   // Search and validate results.
@@ -14,6 +14,9 @@ const SearchComponent = ({ tweets, loading, fetchTweetsJson }) => {
 const SearchBox = props => (
   <div>
     <div className="bar-actions">
+      <p>
+        Search <strong>#Mulesoft</strong> hastag in Twitter
+      </p>
       <button className={btnClasses} onClick={() => props.action()}>
         Search Tweets
       </button>
