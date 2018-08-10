@@ -1,5 +1,6 @@
 import types from './types.js';
 
+// Setup the actions
 const requestTweetsJson = term => ({
   type: types.REQUEST_TWEETS_JSON,
   term: term,
@@ -10,4 +11,4 @@ const receiveTweetsJson = json => ({
   tweets: json
 });
 
-export { requestTweetsJson, receiveTweetsJson };
+export default { requestTweetsJson, receiveTweetsJson };
