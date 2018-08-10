@@ -3,13 +3,15 @@ import types from './types';
 
 const requestTweetsJsonAction = actions.requestTweetsJson;
 const receiveTweetsJsonAction = actions.receiveTweetsJson;
-
-const fetchTweetsJson = subreddit => {
+// Setup dispatch actions
+const fetchTweetsJson = () => {
   return dispatch => {
-    dispatch(requestTweetsJsonAction(subreddit));
+    // Dispatch action request
+    dispatch(requestTweetsJsonAction());
     return fetch(types.API)
       .then(response => response.json())
       .then(json => {
+        // dispatch action when finish the fetch and send the results
         dispatch(receiveTweetsJsonAction(json.statuses));
       });
   };
