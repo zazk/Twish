@@ -2,21 +2,5 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-}
-.bar-actions {
-  text-align: center;
-  padding: 10px;
-}
-
-.search-box {
-  padding: 10px;
-  background: #f9f9f9;
-}
-.search-item {
-  padding: 10px;
-  background: #ffffff;
-  margin: 10px;
-}
-.search-item a {
-  text-decoration: none;
+  color: #666;
 }

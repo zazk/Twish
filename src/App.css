@@ -1,28 +1,30 @@
 .App {
+  max-width: 699px;
+  margin: auto;
+}
+
+.bar-actions {
   text-align: center;
+  padding: 10px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.search-box {
+  padding: 10px;
+  background: #f9f9f9;
+}
+.search-item {
+  padding: 10px;
+  background: #ffffff;
+  margin: 10px;
+}
+.search-item a {
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.mdl-textfield__input {
+  text-align: center;
+  margin: 5px 0;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
 }

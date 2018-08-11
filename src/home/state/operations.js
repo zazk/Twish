@@ -1,18 +1,17 @@
 import actions from './actions';
 import types from './types';
 
-const requestTweetsJsonAction = actions.requestTweetsJson;
-const receiveTweetsJsonAction = actions.receiveTweetsJson;
 // Setup dispatch actions
-const fetchTweetsJson = () => {
+const fetchTweetsJson = term => {
   return dispatch => {
     // Dispatch action request
-    dispatch(requestTweetsJsonAction());
-    return fetch(types.API)
+    dispatch(actions.requestTweetsJson(term));
+    return fetch(`${types.API}${encodeURIComponent(term)}`)
       .then(response => response.json())
       .then(json => {
+        const items = json.statuses ? json.statuses : [];
         // dispatch action when finish the fetch and send the results
-        dispatch(receiveTweetsJsonAction(json.statuses));
+        dispatch(actions.receiveTweetsJson(items));
       });
   };
 };

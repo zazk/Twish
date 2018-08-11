@@ -19,6 +19,9 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "flow-bin": "^0.78.0"
+    "enzyme": "^3.4.1",
+    "enzyme-adapter-react-16": "^1.2.0",
+    "flow-bin": "^0.78.0",
+    "redux-testkit": "^1.0.6"
   }
 }

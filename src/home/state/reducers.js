@@ -11,6 +11,8 @@ const homeReducer = (state = INITIAL_STATE, action) => {
     case types.REQUEST_TWEETS_JSON: {
       return {
         ...state,
+        tweets: [],
+        term: action.term,
         loading: true
       };
     }

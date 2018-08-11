@@ -1,8 +1,12 @@
 ## Twish App
 
-Basic implementation of React and Redux with async actions. Search Fixed Term when touch the [Search Button]
+Basic implementation of React and Redux with async actions. Search Term when touch the [Search Button]
 
-## Development Section
+## Development
+
+### `npm install`
+
+Install all dependencies.
 
 ### `npm start`
 
@@ -25,7 +29,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
-## Deployment Section
+## Deployment
 
 This App have been tested on Heroku Platform and using:
 
