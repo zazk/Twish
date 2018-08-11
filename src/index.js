@@ -7,6 +7,8 @@ import rootReducer from './reducers';
 import logger from 'redux-logger';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
+import registerServiceWorker from './registerServiceWorker';
+
 // Using thunk to manage async actions
 const middleware = applyMiddleware(thunk, logger);
 // Set the store with the reducers
@@ -18,3 +20,4 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+registerServiceWorker();
